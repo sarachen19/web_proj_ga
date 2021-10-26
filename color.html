@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="EN">
+	<head>
+		<title>color game</title>
+		<meta name="color" content="game2" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="color.css" />
+		<meta name=".." content=" " />
+
+		<script src="color.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+
+	<body>
+		<div id="color">
+			<div id="wrapper_color">
+				<p id="box"></p>
+			</div>
+			<div id="time" style="visibility: hidden">
+				Time left: <span id="clock">30</span> seconds
+			</div>
+			<div id="buttons">
+				<button
+					id="startButton"
+					type="button"
+					ONCLICK="start(),show_time(),hide_game(),runCountdown()"
+				>
+					START
+				</button>
+				<button
+					style="visibility: hidden"
+					id="restartButton"
+					type="button"
+					ONCLICK="window.location.href = 'color.html';"
+				>
+					RETRY
+				</button>
+			</div>
+			<p id="result_color"></p>
+		</div>
+	</body>
+</html>

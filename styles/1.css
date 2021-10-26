@@ -1,0 +1,122 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    'h h h'
+    'b b b'
+    'f f f';
+    color:rgb(7, 7, 7);
+    
+ }
+ header{
+     grid-area: h;
+
+ }
+ div#game_body{
+    grid-area: b;
+ }
+ footer{
+     grid-area: f;
+ }
+
+  /* ----------------------------body css---------------------------- */
+ div#game_body{
+    display: grid;
+    grid-template-areas: 
+    'aa aa aa'
+    'b c c';
+    background-color: whitesmoke;
+ }
+ div.game_header{
+     grid-area: aa;
+ }
+ aside.game_aside{
+     grid-area: b;
+ }
+ main.game_main{
+     grid-area: c;
+     width:100%;
+     display:flex;
+     flex-direction: column;
+     align-items: stretch;
+ }
+ .game_aside{  
+     font-size: 100%;
+     color: rgb(82, 82, 80);
+     padding:10px;    
+ }
+ div.game_header
+     {   
+         margin:0;
+         
+     }
+ #game_header_w{
+     color:rgb(238, 107, 107); 
+     font-family: monospace;
+     text-align: center;
+     font-size:220%;
+ }
+ p.view,p.close,p#event1,p#event2{
+    color:rgb(44, 99, 202);
+    font-size: 1.5em; 
+    font-weight: bold;
+ }
+ a#game1,a#game2{
+     text-decoration: none;
+     color:rgb(44, 99, 202);
+     font-size: 1.3em; 
+     font-weight: bold;
+ }
+ a#game1:hover,a#game2:hover{
+     color:yellowgreen;
+ }
+
+p#words1,p#words2{word-break: break-word}
+
+
+.prev,.next{
+    cursor: pointer;
+    width: auto;
+    color: rgb(46, 44, 44);
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 0 3px 3px 0;
+    padding-left:20%
+    }
+
+p#event1:hover,p#event2:hover,.view:hover,.close:hover{
+padding:5% 0;
+  transition: all 0.3s ease-in-out;
+  background: #c1d72e;
+  border: solid 1px #fff;
+  color: #fff;
+}
+.next{padding-left:55%}
+div.slidesContainer{
+    padding:0 15%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+    div#game_body{
+        grid-template-areas: 
+        'aa aa aa'
+        'b b b'
+        'c c c';
+     }
+    aside.game_aside{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    aside.game_aside{
+        border-bottom: rgb(44, 99, 202) 2px solid;
+    }
+   
+}
+@media screen and (min-width: 600px) {
+    aside.game_aside{
+        display:flex;
+        flex-direction: column;
+        border-right: rgb(44, 99, 202) 2px solid;
+    }
+}

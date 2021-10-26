@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta charset="UTF-8">
+
+    <title>Hangman game</title>
+    <script src="testhangman1.js"></script> 
+    <link href="testhangman1.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../assets/css/all.css">                <meta name=".." content=" " /> 
+
+    <meta name="hangman" content=" " /> 
+  </head>
+
+  <body id="hangman">
+   
+
+    <div class="hangman">
+        <script>
+            window.onload=hide;
+        </script>
+        <div id="twoButtons">
+            <button id="startButton" TYPE="button" ONCLICK="show(),isGameOver(),start()">START</button>
+            <button id="restartButton" TYPE="button" ONCLICK="window.location.href = 'testhangman1.html';">RETRY</button>
+        </div>
+        
+        <div id="wrapper_hangman">  
+          <button class="letterButton" TYPE="button" ONCLICK="guess('A'),isGameOver()">A</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('B'),isGameOver()">B</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('C'),isGameOver()">C</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('D'),isGameOver()">D</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('E'),isGameOver()">E</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('F'),isGameOver()">F</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('G'),isGameOver()">G</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('H'),isGameOver()">H</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('I'),isGameOver()">I</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('J'),isGameOver()">J</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('K'),isGameOver()">K</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('L'),isGameOver()">L</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('M'),isGameOver()">M</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('N'),isGameOver()">N</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('O'),isGameOver()">O</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('P'),isGameOver()">P</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('Q'),isGameOver()">Q</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('R'),isGameOver()">R</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('S'),isGameOver()">S</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('T'),isGameOver()">T</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('U'),isGameOver()">U</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('V'),isGameOver()">V</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('W'),isGameOver()">W</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('X'),isGameOver()">X</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('Y'),isGameOver()">Y</button>
+          <button class="letterButton" TYPE="button" ONCLICK="guess('Z'),isGameOver()">Z</button>
+        </div>
+            
+        <div id="gameBody">
+          
+            <p id="line1"></p>
+            <p id="line2"></p>
+            <p id="number"></p>
+            <p id="returnGuess"></p>
+            <p id="showGuessedWord"></p>
+            <p id="result_hangman"></p>
+        </div>
+        
+        <canvas id="canvas_hangman" width="300" height="350"></canvas>
+        <p id="pic"></p>
+        </div>
+             
+    </div>
+
+  </body>
+</html>

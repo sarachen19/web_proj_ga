@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="EN">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="UTF-8" />
+		<title>Gallery and Games</title>
+		<link href="../styles/1.css" rel="stylesheet" type="text/css" />
+		<link href="../styles/haf.css" rel="stylesheet" type="text/css" />
+
+		<link rel="stylesheet" href="../assets/css/all.css" />
+		<meta name=".." content=" " />
+	</head>
+	<body>
+		<header></header>
+        <div id="game_body">
+            <div class="game_header"><p id="game_header_w">Have some fun</p></div>
+                <aside class="game_aside">
+                        <p class="game_words" id="event1">Play Hangman</p> 
+                        <p class="game_words" id="event2">Tricky Square</p>
+                </aside>
+                <main class="game_main">
+                    
+                    <div class="words">
+                        <p style="text-align: center;font-size: larger;">To read description of this feature, click the words on the left.</p>
+                        <p id="words1" style='padding:2% 5%;'></p>
+                        <p id="words2" style='padding:2% 5%;'></p>
+                    </div>
+                    
+                </main>           
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+		<script>
+			//create new element of words for hangman
+			let words1 =
+				"<h3>Welcome to the Hangman game!</h3>" +
+				"<p>Who has not played this game in school? Will you be able to find the secret word before the man gets hanged?</p>" +
+				"<ul style='color:rgb(44, 99, 202)'>[ HIGHLIGHTS ]</ul>" +
+				"<li>Simple and fun game, suitable for children and adults.</li><br>" +
+				"<li>Exercise your brain and relax!</li><br>" +
+				"<li> Beautiful and simple user interface.</li><br>" +
+				"<li>Learn new vocabulary.</li><br>" +
+				"<a id='game1' href='testhangman1.html'>Start Hangman</a>";
+			document.getElementById("words1").innerHTML = words1;
+			$("p#words1").hide();
+
+			//create new element of words for color
+			let words2 =
+				"<h3>How well can you see color? </h3>" +
+				"<p>Perhaps you’re a pro with one hue, but differentiating color is a whole other story.</p>" +
+				"<p>To challenge your abilities,&nbspthere is a sense of satisfaction when you figure out the answer to a complicated test.</p>" +
+				"<p>Moreover, research shows puzzles can help us keep our brain active.</p>" +
+				"<h3>Can You Click The Odd One Out? </h3>" +
+				"<p>This rapid fire puzzle will test your brain’s functioning speed. </p>" +
+				"<p>Make it all the way to level 30 to prove you are a puzzle master!</p>" +
+				"<a id='game2' href='color.html'>Start Tricky square</a>";
+			let node2 = document.createElement("p2");
+			document.getElementById("words2").innerHTML = words2;
+			$("#words2").hide();
+
+			//when the mouse is hovering on "Hangman" title, show relavent words
+			let choice1 = document.getElementById("event1");
+			choice1.addEventListener("mouseover", function () {
+				$("p#words2").hide();
+				$("p#words1").slideDown("slow");
+			});
+
+			//when the mouse is hovering on "Color" title, show relavent words
+			let choice2 = document.getElementById("event2");
+			choice2.addEventListener("mouseover", function () {
+				$("p#words1").hide();
+				$("p#words2").slideDown("slow");
+			});
+		</script>
+
+		<footer></footer>
+	</body>
+</html>

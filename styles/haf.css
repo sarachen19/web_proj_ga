@@ -1,0 +1,141 @@
+/* header css */
+  header {
+    background-color: rgb(44, 99, 202);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size:18px;
+    height:60px;
+    display: flex;
+}
+.right{width:33.33%}
+.logo {
+  padding: 0 0 2% 10%;
+  height:90%;
+}
+.padding-right-4 {
+  padding-right: 4px;
+}
+.header-nav {
+  width:66.66%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left:4%;
+  }
+
+  .header-nav a {
+    color:white;
+    text-decoration: none;
+  }
+  .header-nav a:hover {
+    opacity: 0.6;
+  }
+  
+  .header-nav a:active {
+    color:rgb(113, 139, 187);
+  }
+
+  /* footer css */
+  
+  footer{
+    color:#fff;
+    background-color: rgb(80, 129, 233);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .footer-header {
+    color: white;
+    padding: 5px 0 15px 1%;
+    text-align: left;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+  }
+  
+  .footer-terms {
+    font-size:16px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left:1%;
+  }
+  
+  .footer-terms div {
+    padding-bottom:4px;
+  }
+  
+  .footer-social {
+    font-size: 20px;
+    text-align:left;
+    padding-left:1%;
+  }
+  .sign-up {
+    font-size: 20px;
+    font-weight: 800;
+}
+.font-14 {
+  font-size: 14px;
+}
+.footer-sign-up {
+  padding-left: 1%;
+}
+.site-contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+.footer-line-margin-5 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+@media screen and (max-width: 768px) {
+  header{
+    flex-direction: column;
+    height:120px;
+    font-size: 14px;
+  }
+  div.header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+   
+}
+@media screen and (min-width: 768px) {   
+}
+
+@media screen and (min-width: 992px){
+  .footer-content {
+      display: flex;
+      flex-direction: row;
+  }
+  .hide {
+    display: none;
+}
+  .col-l-1 {width: 8.33%;}
+  .col-l-2 {width: 16.66%;}
+  .col-l-3 {width: 25%;}
+  .col-l-4 {width: 33.33%;}
+  .col-l-5 {width: 41.66%;}
+  .col-l-6 {width: 50%;}
+  .col-l-7 {width: 58.33%;}
+  .col-l-8 {width: 66.66%;}
+  .col-l-9 {width: 75%;}
+  .col-l-10 {width: 83.33%;}
+  .col-l-11 {width: 91.66%;}
+  .col-l-12 {width: 100%;}
+}

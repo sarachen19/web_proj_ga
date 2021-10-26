@@ -1,0 +1,229 @@
+
+html{
+  background-color:rgb(44, 99, 202);
+  color:white;
+}
+
+body#hangman{
+  display:grid;
+  grid-template-areas: 
+      'h h h'
+      'b b b'
+      'f f f';
+}
+header{
+  grid-area:h;
+}
+footer{
+  grid-area:f;
+}
+div.hangman {
+  background-image: linear-gradient(50deg, #f6d365 0%, #fda085 100%);
+  background-repeat: no-repeat;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #fff;
+  grid-area:b;
+  display:grid;
+  grid-template-areas: 
+      'head head '
+      'letter1 letter2 '
+      'can body1'
+      'pic body2'
+      ;
+}
+div#twoButtons{
+  grid-area:head;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:5%;
+}
+#gameBody{
+  grid-column-start: body1;
+  grid-column-end: body2;
+  grid-row-start: body1;
+  grid-row-end: body2;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  }
+#canvas_hangman{
+  
+  grid-area:can;
+  display:flex;
+  flex-direction: row;
+}
+p#pic{
+  grid-area:pic;
+}
+div#wrapper_hangman {
+  padding:2%;
+  grid-column-start: letter1;
+  grid-column-end: letter2;
+  grid-row-start: letter1;
+  grid-row-end: letter2;
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+
+#startButton{
+  background-color: #fff;
+  color: #006699;
+  font-size: 20px;
+  border-radius: 30px;
+  display: inline-block;
+  height:100px;
+  width:100px;
+}
+#restartButton{
+  background-color: #fff;
+  color: #006699;
+  font-size: 20px;
+  border-radius: 30px;
+  display: inline-block;
+  height:100px;
+  width:100px;
+}
+.letterButton{
+  background-color: #fff;
+  color: #006699;
+  font-size: 30px;
+  border-radius: 8px;
+  display: inline-block;
+  width:8%;
+  height:8%;
+
+}
+#startButton:hover {
+  transition: all 0.3s ease-in-out;
+  background: #c1d72e;
+  border: solid 1px #fff;
+  color: #fff;
+}
+#restartButton:hover {
+  transition: all 0.3s ease-in-out;
+  background: #c1d72e;
+  border: solid 1px #fff;
+  color: #fff;
+}
+.letterButton:hover {
+  transition: all 0.3s ease-in-out;
+  background: #c1d72e;
+  border: solid 1px #fff;
+  color: #fff;
+}
+#number{
+  margin:0;
+color: #006699;
+font-size:1.2em;  
+}
+
+#showGuessedWord{
+  margin:2%;
+  align-self: center;
+font-size:1.5em;
+font-family: initial;
+color: #006699;
+font-size: bolder;
+}
+#returnGuess{
+  margin:2%;
+  text-align:center;
+font-size:1.1em;
+color: #006699;
+}
+#canvas_hangman{
+color: #fda085;
+}
+#line1{
+  margin:2%;
+  font-size:1em;
+  text-align:center;
+}
+#line2{
+  margin:2%;
+  font-size:1em;
+  text-align:center;
+}
+
+
+
+@media screen and (max-width: 600px){
+  div.hangman {
+    grid-template-columns: 30% 70%;
+    grid-template-rows:15% 25% 20% 20%;
+    font-size: 16px;
+    font-size: bold;
+  }
+  .letterButton{
+    width:30px;
+    height:30px;
+    font-size: 15px;
+
+  }
+  #canvas_hangman{width:100%;}
+  img#win_hangman{width:100%;}
+  img#lose_hangman{width:100%;}
+  #startButton{height:60px;width:60px;font-size:15px;}
+  #restartButton{height:60px;width:60px;font-size:15px;}
+
+}
+@media screen and (min-width: 600px) {
+
+  div.hangman {
+    grid-template-columns: 30% 70%;
+    grid-template-rows:15% 30% 25% 30%;
+    font-size: 29px;
+    font-size: bold;
+  }
+  .letterButton{
+    width:60px;
+    height:60px;
+    font-size:25px;
+  }
+  #canvas_hangman{width:100%;}
+  img#win_hangman{width:100%;}
+  img#lose_hangman{width:100%;}
+  #startButton{height:80px;width:80px;font-size:20px;}
+  #restartButton{height:80px;width:80px;font-size:20px;}
+
+}
+@media screen and (min-width: 800px) {
+  
+  div.hangman {
+    grid-template-columns: 30% 70%;
+    grid-template-rows:10% 20% 35% 35%;
+    font-size: 39px;
+    font-size: bold;
+  }
+  .letterButton{
+    width:60px;
+    height:60px;
+    font-size:25px;
+  }
+  #canvas_hangman{width:100%;}
+  img#win_hangman{width:100%;}
+  img#lose_hangman{width:100%;}
+  #startButton{height:80px;width:80px;font-size:20px;}
+  #restartButton{height:80px;width:80px;font-size:20px;}
+
+}
+@media screen and (min-width: 1000px) {
+  div.hangman {
+    grid-template-columns: 30% 70%;
+    font-size: 35px;
+    font-size: bold;
+  }
+  .letterButton{
+    width:80px;
+    height:80px;
+    font-size:30px;
+  }
+  
+}
